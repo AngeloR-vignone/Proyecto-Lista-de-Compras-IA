@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Tasa del dólar -->
+        <EditText
+            android:id="@+id/campoTasaDolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tasa del dólar (ejemplo: 135)"
+            android:inputType="numberDecimal"
+            android:gravity="center" />
+
+        <!-- Botón para agregar producto -->
+        <Button
+            android:id="@+id/botonAgregarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar producto"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#8BC34A"/>
+
+        <!-- Lista de productos -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listaProductos"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="8dp" />
+
+        <!-- Separador visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Total en USD y Bs -->
+        <TextView
+            android:id="@+id/textoTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total: $0.00 / Bs 0.00"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/botonGuardarLista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar lista de compras"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#8BC34A"/>
+
+        <Button
+            android:id="@+id/botonHistorialCompras"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver historial de listas"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#8BC34A"/>
+
+        <!-- Separador visual -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="12dp" />
+
+        <!-- Campo para ingresar ingredientes -->
+        <EditText
+            android:id="@+id/campoIngredientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Escribe los ingredientes para la receta"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:gravity="top" />
+
+        <!-- Botón para generar receta -->
+        <Button
+            android:id="@+id/botonGenerarReceta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Generar receta con IA"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00BFFF"
+            />
+
+
+        <Button
+            android:id="@+id/botonVerHistorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ver historial de recetas"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#00BFFF"/>
+
+
+        <!-- Resultado de la receta -->
+        <TextView
+            android:id="@+id/resultadoReceta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Aquí aparecerá la receta"
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="#444444" />
+
+    </LinearLayout>
+</ScrollView>
